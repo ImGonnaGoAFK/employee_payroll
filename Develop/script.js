@@ -17,10 +17,10 @@ const collectEmployees = function() {
       let lname = prompt("What is employee's last name?");
       lastName.push(lname);
 
-      let pay = prompt("What is the employee's salary?");
-      salary.push(parseInt(pay));
+      let pay = prompt("What is the employee's salary? (type a number)");
+      salary.push(isNaN(pay));
       moreEmp = confirm("Do you want to add more employees?");
-        }
+    }
     
   
     console.log(firstName, lastName, salary);
