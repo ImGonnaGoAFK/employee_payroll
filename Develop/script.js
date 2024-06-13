@@ -5,16 +5,16 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const collectEmployees = function(employeeArray, wantAnotherEmployee) {
   if(wantAnotherEmployee === false){
     // console.log("USER IS DONE, RETURNING MY ARRAY NOW: ")
-    // console.log(employeeArray)
+    console.log(employeeArray)
     return employeeArray;
   } 
   // TODO: Get user input to create and return an array of employee objects
   var newEmployee = collectAnEmployee();
-  console.log("MY NEW EMPLOYEE RETURNED: ", newEmployee)
+  // console.log("MY NEW EMPLOYEE RETURNED: ", newEmployee)
   employeeArray.push(newEmployee)
-  console.log("MY NEW EMPLOYEE ARRAY: ", employeeArray)
+  // console.log("MY NEW EMPLOYEE ARRAY: ", employeeArray)
   var userWantsAnotherEmployee = confirm("Do You want to add another employee?")
-  console.log("========starting new call after this ====== ")
+  // console.log("========starting new call after this ====== ")
   return collectEmployees(employeeArray, userWantsAnotherEmployee)
 }
 
