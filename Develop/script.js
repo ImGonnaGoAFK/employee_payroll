@@ -16,33 +16,32 @@ const collectEmployees = function(employeeArray, wantAnotherEmployee) {
 const collectAnEmployee = function (){
   let firstNameInput = prompt("What is employee's first name?");
   let lastNameInput = prompt("What is employee's last name?");
-  
-  function collectSalary(){
-  const salaryInput = parseInt(prompt("What is the employee's salary? (type a number)"))};
+  let salaryInput = parseInt(prompt("What is the employee's salary? (type a number)"));
 
-     if (isNaN(salaryInput)){
-      alert('Not a Number! Try again');
-
-  };
+    while (isNaN(salaryInput)){
+      alert('This is not a number, please try again');
+      salaryInput = parseInt(prompt("What is the employee's salary? (type a number)"));
+    }
+    
   const employee = {
     firstName: firstNameInput,
     lastName: lastNameInput,
     salary: salaryInput
   }
-  return employee
+  return employee;
 }
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
 
-  // let sum = parseInt(0);
+  let sum = parseInt(0);
 
-  //   for (let i=0; i < employeesArray.length; i++)
-  //     {
-  //       sum += employeesArray[i].salary[i];
-  //     }
-  //     console.log(sum);
+    for (let i=0; i < employeesArray.length; i++)
+      {
+        sum += employeesArray[i].salary;
+      }
+      console.log('The average employee salary between our ' + employeesArray.length + ' employee(s) is $' + sum / employeesArray.length);
 }
 
 
